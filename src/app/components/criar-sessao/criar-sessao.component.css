@@ -1,0 +1,13 @@
+.conteudo {
+    margin: auto;
+    margin-top: 50px;
+    max-width: 500px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.borda {
+    border: 1px solid black;
+    border-radius: 3px;
+    box-shadow: 5px 5px black;
+}

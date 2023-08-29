@@ -1,0 +1,26 @@
+<div style="margin-top: 50px;"></div>
+
+<div *ngFor="let session of sessions; let i = index;" class="card float" style="width: 18rem;">
+    <img src="https://img.freepik.com/fotos-gratis/fundo-abstrato-preto-escuro-com-lascas-de-madeira_24972-208.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+
+        <div style="text-align: center; margin-bottom: 5px;">
+            <a routerLink="/sessoes/{{session.id}}">
+                <span class="pn-btn" style="background-color: rgb(0, 255, 0);">
+                    <i class="bi bi-eye"></i>
+                </span>
+            </a>
+            <a class="pn-btn" routerLink="/atualizar/{{session.id}}" style="background-color: yellow;">
+                <i class="bi bi-pen"></i>
+            </a>
+            <a routerLink="/remover/{{session.id}}" class="pn-btn" style="background-color: red;">
+                <i class="bi bi-x"></i>
+            </a>
+        </div>
+
+      <h5 class="card-title">{{session.movieName}}</h5>
+      Horário de Início: {{session.startingTime}} <br>
+      Horário de Término: {{session.endingTime}}
+    </div>
+    <span *ngIf="(i+1) % 4 == 0"><br></span>
+</div>
