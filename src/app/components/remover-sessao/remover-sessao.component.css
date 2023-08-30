@@ -1,0 +1,17 @@
+.formulario {
+    margin: auto;
+    max-width: 500px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px black;
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.sec-btns {
+    text-align: center;
+}
+
+.margem-esquerda {
+    margin-left: 3px;
+}

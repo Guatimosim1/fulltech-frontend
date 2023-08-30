@@ -6,6 +6,7 @@ import { SobreComponent } from './components/sobre/sobre.component';
 import { SessaoComponent } from './components/sessao/sessao.component';
 import { AtualizarSessaoComponent } from './components/atualizar-sessao/atualizar-sessao.component';
 import { RemoverSessaoComponent } from './components/remover-sessao/remover-sessao.component';
+import { ChairComponent } from './components/chair/chair.component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: "criar-sessao", component: CriarSessaoComponent},
   {path: "atualizar/:id", component: AtualizarSessaoComponent},
   {path: "remover/:id", component: RemoverSessaoComponent},
+  {path: "chair/:id", component: ChairComponent},
   {path: "sobre", component: SobreComponent}
 ];
 

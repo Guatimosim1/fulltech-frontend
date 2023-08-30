@@ -1,0 +1,18 @@
+<div class="content">
+    <div *ngIf="!currentChair.status">
+        Esta cadeira está disponível. Digite o nome do cliente que deseja assinalar a este assento:
+        <div style="margin-top: 10px; text-align: center;">
+            <input type="text" class="input-control margem" [(ngModel)]="nome"><br><hr>
+            <button class="btn btn-dark margem" (click)="assign(nome)">Assinalar</button>
+            <button class="btn btn-secondary" (click)="fechar()">Voltar</button>
+        </div>
+    </div>
+    
+    <div *ngIf="currentChair.status">
+        Desculpe. Esta cadeira já está assinalada para o cliente {{currentChair.costumerName}}
+        <hr>
+        <div style="margin-top: 10px; text-align: center;">
+            <button class="btn btn-secondary" (click)="fechar()">Voltar</button>
+        </div>
+    </div>
+</div>

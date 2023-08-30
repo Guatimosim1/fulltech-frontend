@@ -1,0 +1,14 @@
+.content {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px black;
+    text-align: justify;
+    padding: 5px;
+}
+
+.margem {
+    margin-right: 5px;
+}

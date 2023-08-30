@@ -1,1 +1,14 @@
-<p>atualizar-sessao works!</p>
+<div class="conteudo borda">
+    <form action="/sessoes/atualizar" method="post">
+        <h2>Fomulário de Atualização de Sessão</h2> <br>
+        <input type="hidden" name="id" [(ngModel)]="session.id" readonly>
+        <label>Digite o nome do Filme:</label>
+        <input type="text" name="movieName" placeholder="Ex: Star Wars VI - Uma Nova Esperança" size="50" [(ngModel)]="session.movieName"> <br>
+        <label>Digite a hora de início:</label> <input type="time" name="startingTime" [(ngModel)]="session.startingTime"> <br>
+        <label>Digite a hora de início:</label> <input type="time" name="endingTime" [(ngModel)]="session.endingTime"> <br>
+        <div class="conteudo margem">
+            <a href="/" class="btn btn-primary">&#10554; Voltar</a>
+            <button class="btn btn-dark" (click)="atualizarSessao(session)">Atualizar Sessão</button>
+        </div>
+    </form>
+</div>

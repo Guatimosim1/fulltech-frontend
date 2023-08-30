@@ -1,1 +1,15 @@
-<p>sessao works!</p>
+<div class="content">
+    <div class="title">
+        <h1>
+            {{currentSession.movieName}}
+        </h1>
+        <h4>
+            {{currentSession.startingTime}} --- {{currentSession.endingTime}}
+        </h4>
+        <hr>
+        <h5>Cadeiras Disponíveis</h5>
+    </div>
+    <div *ngFor="let chair of cadeiras; let i = index;" class="chair" [class.red]="chair.status" (click)="visualizarCadeira(chair.id)">
+        {{i+1}}
+    </div>
+</div>

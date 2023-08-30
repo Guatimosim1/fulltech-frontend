@@ -14,6 +14,7 @@ import { ErroComponent } from './components/erro/erro.component';
 import { SessaoComponent } from './components/sessao/sessao.component';
 import { AtualizarSessaoComponent } from './components/atualizar-sessao/atualizar-sessao.component';
 import { RemoverSessaoComponent } from './components/remover-sessao/remover-sessao.component';
+import { ChairComponent } from './components/chair/chair.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { RemoverSessaoComponent } from './components/remover-sessao/remover-sess
     ErroComponent,
     SessaoComponent,
     AtualizarSessaoComponent,
-    RemoverSessaoComponent
+    RemoverSessaoComponent,
+    ChairComponent
   ],
   imports: [
     BrowserModule,
