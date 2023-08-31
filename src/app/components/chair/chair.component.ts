@@ -29,8 +29,11 @@ export class ChairComponent implements OnInit {
   }
 
   public assign(nome : string) {
-    this.service.assignChairByCostumerName(this.currentChair.id, nome).subscribe(res => res);
-    this.fechar();
+    this.service.assignChairByCostumerName(this.currentChair.id, nome).subscribe({
+      next: res => res,
+      complete: () => this.fechar(),
+      error: erro => console.error(erro)
+    });
   }
 
   public fechar() : void {
