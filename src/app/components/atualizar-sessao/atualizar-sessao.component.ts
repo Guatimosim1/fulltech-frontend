@@ -37,7 +37,11 @@ export class AtualizarSessaoComponent implements OnInit {
     post.endingTime = session.endingTime;
     post.movieName = session.movieName;
     
-    this.service.updateSession(post, session.id).subscribe(res => res);
-    this.router.navigate(['']);
+    this.service.updateSession(post, session.id).subscribe({
+      next: res => res,
+      complete: () => this.router.navigate(['']),
+      error: erro => console.log(erro)
+    });
+    
   }
 }

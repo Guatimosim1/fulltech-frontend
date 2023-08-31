@@ -19,7 +19,7 @@ export class CriarSessaoComponent implements OnInit {
 
   public createSession() : void {
     this.service.createSession(this.session).subscribe({
-      next: () => this.redirectTo(''),
+      complete: () => this.redirectTo(''),
       error: erro => console.error(erro)
     });
   }

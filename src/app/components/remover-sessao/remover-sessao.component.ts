@@ -28,8 +28,10 @@ export class RemoverSessaoComponent implements OnInit {
   }
 
   removerSessaoAtual() : void {
-    this.service.removeSession(this.id).subscribe(res => res);
-    this.fechar();
+    this.service.removeSession(this.id).subscribe({
+      complete: () => this.fechar(),
+      error: erro => console.log(erro)
+    });
   }
 
   fechar() : void {
