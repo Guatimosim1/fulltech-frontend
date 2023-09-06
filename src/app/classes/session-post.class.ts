@@ -11,4 +11,5 @@ export class SessionPost {
     public startingTime : string = "00:00";
     public endingTime : string = "00:00";
     public movieName : string = "";
+    public image : any = "";
 }

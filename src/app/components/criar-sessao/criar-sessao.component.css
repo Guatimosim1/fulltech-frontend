@@ -11,3 +11,11 @@
     border-radius: 3px;
     box-shadow: 5px 5px black;
 }
+
+.espacamento {
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: justify;
+    max-width: 90%;
+}

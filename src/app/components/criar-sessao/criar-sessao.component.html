@@ -1,10 +1,27 @@
 <div class="conteudo borda">
     <form>
         <h2>Fomulário de Inserção de Sessão</h2> <br>
-        <label>Digite o nome do Filme:</label>
-        <input type="text" name="movieName" placeholder="Ex: Star Wars VI - Uma Nova Esperança" size="50" [(ngModel)]="session.movieName"> <br>
-        <label>Digite a hora de início:</label> <input type="time" name="startingTime" [(ngModel)]="session.startingTime"> <br>
-        <label>Digite a hora de início:</label> <input type="time" name="endingTime" [(ngModel)]="session.endingTime"> <br>
+        
+        <div class="espacamento">
+            <label>Digite o nome do Filme:</label>
+            <input type="text" name="movieName" placeholder="Ex: Star Wars VI - Uma Nova Esperança" size="50" [(ngModel)]="session.movieName"> <br>
+        </div>
+
+        <div class="espacamento">
+            <label>URL da Imagem para o Filme:</label>
+            <input type="text" name="image" placeholder="Ex: http://minha-imagem/abcdefgh" size="50" [(ngModel)]="session.image"><br>
+        </div>
+
+        <div class="espacamento">
+            <label>Digite a hora de início: &nbsp;</label>
+            <input type="time" name="startingTime" [(ngModel)]="session.startingTime"> <br>
+        </div>
+
+        <div class="espacamento">
+            <label>Digite a hora de término: &nbsp;</label>
+            <input type="time" name="endingTime" [(ngModel)]="session.endingTime"> <br>
+        </div>
+
         <div style="margin-top: 5px;">
             <a routerLink="/" class="btn btn-primary">&#10554; Voltar</a> <span style="padding-left: 5px;"></span>
             <button type="submit" class="btn btn-dark" (click)="createSession()">Salvar Sessão</button>

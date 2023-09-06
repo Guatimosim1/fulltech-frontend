@@ -1,8 +1,16 @@
-<div class="formulario alert alert-danger">
+<div *ngIf="!cadeirasAssinaladas" class="formulario alert alert-danger">
     <h3>Tem certeza que deseja remover a sessão {{session.movieName}}?</h3>
     <hr>
     <div class="sec-btns">
         <button class="btn btn-danger" (click)="removerSessaoAtual()">Sim, remover</button>
         <button class="btn btn-dark margem-esquerda" (click)="fechar()">Não, voltar</button>
     </div>
+</div>
+
+<div *ngIf="cadeirasAssinaladas" class="formulario" style="padding: 5px; text-align: center;">
+    <h3>
+        Não é permitido remover esta sessão. Nela, existem cadeiras assinaladas.
+    </h3>
+    <hr>
+    <button class="btn btn-dark" (click)="fechar()">Voltar</button>
 </div>
